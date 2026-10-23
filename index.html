@@ -104,6 +104,6 @@ window.addEventListener('pagehide',stopStudio);
 const renderWithStudio=render;
 render=function(id){if(id==='cover'){renderWithStudio('studio');const main=document.querySelector('#main');main.querySelector('h2').textContent='Album Cover Studio';main.querySelector('.meta').textContent='DESIGN YOUR NEXT RELEASE';main.querySelectorAll('.studio-box').forEach((box,i)=>{if(i<2)box.hidden=true});main.querySelector('h2').nextElementSibling.textContent='Generate original geometric cover art, add your title and artist name, and download a PNG. Free, with no account required.';return;}return renderWithStudio(id);};
 const coverNav=document.createElement('button');coverNav.type='button';coverNav.dataset.open='cover';coverNav.textContent='Album Cover Studio';document.querySelector('#nav').appendChild(coverNav);
-const guestNav=document.createElement('button');guestNav.type='button';guestNav.textContent='Guest Artists ↗';guestNav.onclick=()=>{window.location.href='guest-artists.html'};document.querySelector('#nav').appendChild(guestNav);
+const guestNav=document.createElement('button');guestNav.type='button';guestNav.textContent='Guest Artist Spotlight ↗';guestNav.onclick=()=>{window.location.href='guest-artists.html'};document.querySelector('#nav').appendChild(guestNav);
 if(new URLSearchParams(window.location.search).get('room')==='cover')render('cover');
 </script></body></html>
